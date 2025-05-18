@@ -1,3 +1,6 @@
 FROM sflyr/sqlplus:latest
 
-RUN apt-get install -y curl
+RUN apt-get update && \
+    apt-get install -y curl && \
+    rm -rf /var/lib/apt/lists/*
+
