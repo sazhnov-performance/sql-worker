@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Docker image with plugins baked in
         run: |
-          docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME:latest .
+          docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME:0.1 .
 
       - name: Push to Docker Hub
-        run: docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest
+        run: docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:0.1
